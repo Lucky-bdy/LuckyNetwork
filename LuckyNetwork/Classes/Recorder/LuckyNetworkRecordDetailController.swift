@@ -12,6 +12,12 @@ class LuckyNetworkRecordDetailController: UIViewController {
     
     @IBOutlet weak var contentLab: UILabel!
     
+    
+    @IBAction func actionForBack(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    
     var record: Record
     
     public init(record: Record) {

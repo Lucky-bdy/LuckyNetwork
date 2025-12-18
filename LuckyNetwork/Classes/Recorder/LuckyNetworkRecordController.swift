@@ -15,6 +15,20 @@ public class LuckyNetworkRecordController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     
+    @IBOutlet weak var backBtn: UIButton!
+    
+    @IBAction func actionForBack(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func actionForClean(_ sender: Any) {
+        clear()
+    }
+    
+    
+    
+    
+    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: "LuckyNetworkRecordController", bundle: Bundle(for: LuckyNetworkRecordController.self))
     }
@@ -47,7 +61,14 @@ extension LuckyNetworkRecordController {
     
     func setupUI() {
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "clear", style: .done, target: self, action: #selector(clear))
+        if let navi = navigationController {
+            if navi.viewControllers.count == 1 {
+                backBtn.isHidden = true
+            }
+        }else{
+            backBtn.isHidden = true
+        }
+        
         
         tableView.delegate = self
         tableView.dataSource = self

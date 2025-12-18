@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="24412" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24405"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YBd-ER-a7N">
-                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <rect key="frame" x="0.0" y="162" width="393" height="622"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucZ-z1-qsP">
                             <rect key="frame" x="15" y="0.0" width="363" height="20.333333333333332"/>
@@ -39,20 +39,48 @@
                     <viewLayoutGuide key="contentLayoutGuide" id="qsJ-ET-grQ"/>
                     <viewLayoutGuide key="frameLayoutGuide" id="fO5-5r-jrc"/>
                 </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vVQ-eg-Zd8">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="162"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IO6-qa-vdC">
+                            <rect key="frame" x="0.0" y="118" width="52.666666666666664" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="gNE-Dd-TgO"/>
+                            </constraints>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="chevron.backward" catalog="system"/>
+                            <connections>
+                                <action selector="actionForBack:" destination="-1" eventType="touchUpInside" id="cSd-BR-nac"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="IO6-qa-vdC" firstAttribute="leading" secondItem="vVQ-eg-Zd8" secondAttribute="leading" id="7XG-BB-hOc"/>
+                        <constraint firstAttribute="bottom" secondItem="IO6-qa-vdC" secondAttribute="bottom" id="j0e-hi-yQM"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="vVQ-eg-Zd8" secondAttribute="trailing" id="2hP-Ef-fdM"/>
+                <constraint firstItem="YBd-ER-a7N" firstAttribute="top" secondItem="vVQ-eg-Zd8" secondAttribute="bottom" id="7ou-fd-JnF"/>
                 <constraint firstItem="YBd-ER-a7N" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="8Eu-66-sxK"/>
+                <constraint firstItem="vVQ-eg-Zd8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="GMD-wG-Bnh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="vVQ-eg-Zd8" secondAttribute="bottom" constant="-44" id="KVX-rO-8bJ"/>
+                <constraint firstAttribute="top" secondItem="vVQ-eg-Zd8" secondAttribute="top" id="S4B-Qv-yUY"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="YBd-ER-a7N" secondAttribute="bottom" id="T1K-8f-yWs"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="YBd-ER-a7N" secondAttribute="top" id="WoA-2j-PrR"/>
                 <constraint firstItem="ucZ-z1-qsP" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" constant="-30" id="omY-4v-GCo"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="YBd-ER-a7N" secondAttribute="trailing" id="ruo-VM-xhG"/>
             </constraints>
-            <point key="canvasLocation" x="105" y="20"/>
+            <point key="canvasLocation" x="104.58015267175573" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
