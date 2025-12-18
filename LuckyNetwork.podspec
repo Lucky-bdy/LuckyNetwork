@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LuckyNetwork'
-  s.version          = '1.3.4'
+  s.version          = '1.3.5'
   s.summary          = 'A short description of LuckyNetwork.'
 
   s.description      = <<-DESC
