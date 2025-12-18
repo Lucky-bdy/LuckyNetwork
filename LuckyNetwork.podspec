@@ -15,10 +15,10 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/JunkyTang/LuckyNetwork'
+  s.homepage         = 'https://github.com/Lucky-bdy/LuckyNetwork'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Lucky' => '921969987@qq.com' }
-  s.source           = { :git => 'https://github.com/JunkyTang/LuckyNetwork.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/Lucky-bdy/LuckyNetwork.git', :tag => s.version.to_s }
   
 
   s.ios.deployment_target = '13.0'
